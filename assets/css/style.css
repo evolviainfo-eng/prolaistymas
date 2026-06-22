@@ -138,13 +138,14 @@ ul{ list-style:none; }
 .logo{ display:flex; align-items:center; gap:.7rem; flex-shrink:0; }
 .logo-img{ height:clamp(46px,5.4vw,58px); width:auto; display:block; transition:background .4s var(--ease), box-shadow .4s var(--ease); }
 .logo--footer .logo-img{ height:84px; }
-/* full-colour logo everywhere; subtle white chip keeps it legible on dark backgrounds */
-.site-header.is-hero-top .logo-img,
+/* full-colour logo everywhere; header sits bare over the hero, footer gets a white chip */
+.site-header.is-hero-top .logo-img{
+  filter:drop-shadow(0 2px 10px rgba(0,0,0,.35));
+}
 .footer .logo-img{
-  background:#fff; padding:6px 10px; border-radius:12px;
+  background:#fff; padding:8px 14px; border-radius:12px;
   box-shadow:0 6px 22px rgba(0,0,0,.18);
 }
-.logo--footer .logo-img{ padding:8px 14px; }
 .logo__mark{ width:42px; height:42px; flex-shrink:0; }
 .logo__type{ display:flex; flex-direction:column; line-height:1; }
 .logo__name{ font-family:var(--display); font-weight:800; font-size:1.32rem; letter-spacing:-.02em; color:var(--ink); }
